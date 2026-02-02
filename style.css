@@ -10,7 +10,8 @@
 .left {
     position: fixed;
     top: 0;
-    width: 30vw;
+    max-width: 30vw;
+    width: 100%;
     height: 100vh;
     text-align: center;
     background-color: #1F2024;
@@ -33,7 +34,8 @@
 }
 
 .nav_left_session ul {
-    height: 200px;
+    max-height: 200px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -65,7 +67,8 @@ header {
 }
 
 .upp {
-    height: 100px;
+    max-height: 20vh;
+    height: 100%;
     font-size: 60px;
     display: flex;
     justify-content: center;
@@ -86,10 +89,6 @@ main {
     to {background-color: rgba(20, 22, 20, 0.562)}
 }
 
-.text a {
-    text-decoration: none;
-}
-
 .inicial {
     min-height: 100vh;
     padding: 2rem;
@@ -103,15 +102,17 @@ main {
 
 .inicial h2 {
     font-weight: 300px;
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 #nameA {
     color: #6bf559ef;
     font-family: "Story Script", sans-serif;
-    font-weight: 500;
     animation: rainbow 3s linear infinite;
-    font-size: 70px;
+    font-size: 5rem;
+    display: inline-block;
+    max-width: 100%;
+    word-wrap: break-word;
 }
 
 @keyframes rainbow {
@@ -122,7 +123,8 @@ main {
 
 .about {
     height: 500px;
-    width: 600px;
+    max-width: 600px;
+    min-width: 320px;
     margin: auto;
 }
 
@@ -133,12 +135,12 @@ main {
 .text_about {
     position: relative;
     height: 200px;
-    width: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     padding: 10px;
+    flex-wrap: nowrap;
 }
 
 .big-text {
@@ -148,7 +150,6 @@ main {
     color: rgba(105, 102, 102, 0.281);
     letter-spacing: 7px;
     user-select: none;
-    white-space: nowrap;
 }
 
 .front-text {
@@ -165,8 +166,9 @@ main {
 }
 
 .skills {
-    height: 700px;
-    width: 600px;
+    height: 850px;
+    max-width: 600px;
+    min-width: 320px;
     margin: auto;
 }
 
@@ -174,6 +176,7 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 25px;
+  flex-wrap: nowrap;
 }
 
 .skill-card {
@@ -201,4 +204,10 @@ footer {
     background-color: #4B4952;
     color: white;
     padding: 20px;
+}
+
+footer img {
+    width: auto;
+    height: 50px;
+    padding: 10px;
 }
